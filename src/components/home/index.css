@@ -1,0 +1,92 @@
+
+body {
+
+    margin: 0;
+    background: linear-gradient(270deg, #051f64, #16F9C1 110%);
+
+}
+
+.logo {
+
+    padding: 3.50cm 16cm;
+}
+
+.logo img {
+    
+    width: 200px;
+    height: 200px;
+}
+
+.nome h4 {
+
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+
+}
+
+.nome {
+
+    position: absolute;
+    top: 50%;
+    left: 49.40%;
+    transform: translate(-50%, -50%);
+}
+
+.pesquisa {
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: aliceblue;
+    height: 40px;
+    width: 500px;
+    border-radius: 40px;
+
+    padding: 10px;
+
+}
+
+
+.pesquisa input {
+
+    background-color: aliceblue;
+
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 52%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+
+    height: 35px;
+    width: 430px;
+
+
+
+}
+
+.lupa img {
+
+    cursor:pointer;
+    width: 20;
+    height: 40px;
+
+    position: absolute;
+    top: 50%;
+    left: 94%;
+    transform: translate(-50%, -50%);
+}
+
+
+.playliste {
+
+    padding: 80px 550px;
+    color: rgb(255, 255, 255);
+
+    
+}
+
+
+
