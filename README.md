@@ -1,6 +1,3 @@
-# Labefy
-
-### ⏳ ***Projeto em andamento***
-
+Labefy
+⏳ Projeto em andamento
 ⚙ BETA
-
