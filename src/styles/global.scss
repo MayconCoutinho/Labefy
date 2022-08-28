@@ -27,3 +27,17 @@ a {
     background: black;
   }
 } 
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: white;
+    background: rgb(163, 163, 163);
+  }
+} 
+
+h1{
+  text-align: center;
+}

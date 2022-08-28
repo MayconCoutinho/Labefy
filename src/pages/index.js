@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React, { useState} from "react";
-import Link from 'next/link';
+import PlayMusica from '../components/PlayMusica/PlayMusica';
 
 export default function Home() {
 
@@ -17,9 +17,10 @@ export default function Home() {
     {/* <link rel="icon" href="/favicon.ico" /> */}
   </Head>
 
-  <h1 > Pagina Home </h1>
+  <h1> SpotiLofi </h1>
 
- <Link href='/musicas'> Musicas  </Link> 
+
+ <PlayMusica/>
 
 
      
