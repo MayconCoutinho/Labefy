@@ -1,17 +1,15 @@
 import Head from 'next/head'
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import styles from './Teste.module.scss'
-import {
-  FaArrowAltCircleRight,
-  FaArrowAltCircleLeft,
-  FaPlay,
-  FaPause
-} from 'react-icons/fa'
 import PlayMusica from '../components/PlayMusica/PlayMusica.js'
+import { GlobalContext } from '../context/global/index.js';
+import Link from 'next/link';
 
-export default function teste() {
+export default function Musicas() {
 
-  const [musica, setMusica] = useState(1);
+  const {musica} = useContext(GlobalContext)
+
+  console.log(musica)
 
   return (
     <div className={styles.container}>
@@ -21,6 +19,8 @@ export default function teste() {
         <meta name="Labefy" content="Um app de musica" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+
+      <Link href='/'> Home  </Link>
 
       <div> 
       

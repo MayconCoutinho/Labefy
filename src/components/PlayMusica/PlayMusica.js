@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import styles from './PlayMusica.module.scss'
 import {
   FaArrowAltCircleRight,
@@ -6,13 +6,15 @@ import {
   FaPlay,
   FaPause
 } from 'react-icons/fa'
+import { GlobalContext } from '../../context/global/index.js';
 
 export default function PlayMusica() {
-
-  const [musica, setMusica] = useState(1);
   const [tocando, setTocando] = useState(false)
   const [duration, setDuration] = useState(0)
   const [currentTime, setCurrentTime] = useState(0)
+
+  const {musica} = useContext(GlobalContext)
+  const {setMusica} = useContext(GlobalContext)
 
   const audioPlay = useRef()
   const progressBar = useRef()
@@ -30,15 +32,10 @@ export default function PlayMusica() {
     const seconds = Math.floor(secs % 60)
     const returnSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`
     return `${returnMinutes} : ${returnSeconds}`
-  }
-
-  const url = `http://spoti4.future4.com.br/${musica}.mp3`;
-  
+  }  
 
   const MusicaAtual = (props) => {
-
     setMusica(props)
-
   }
 
   const PlayPause = () => {
@@ -57,7 +54,6 @@ export default function PlayMusica() {
   }
 
   const whilePlaying = () => {
-
     progressBar.current.value = audioPlay.current.currentTime
     ChangePlayCurrentTime()
     animationRef.current = requestAnimationFrame(whilePlaying)
@@ -65,14 +61,12 @@ export default function PlayMusica() {
   }
   
   const ChangeRange = () => {
-
     audioPlay.current.currentTime = progressBar.current.value
     ChangePlayCurrentTime()
 
   }
 
   const ChangePlayCurrentTime = () => {
-
     progressBar.current.style.setProperty('--seek-before-width', `${progressBar.current.value / duration * 100}%`)
     setCurrentTime(progressBar.current.value)
   }
@@ -81,7 +75,6 @@ export default function PlayMusica() {
     <div className={styles.container}>
 
       <audio ref={audioPlay} className={styles.musica} src={`/music/${musica}.m4a`} />
-      {/* <audio ref={audioPlay} className={styles.musica} src={url} /> */}
 
       <div className={styles.containerButton}>
 
