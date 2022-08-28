@@ -9,12 +9,13 @@ import {
 import { GlobalContext } from '../../context/global/index.js';
 
 export default function PlayMusica() {
+
   const [tocando, setTocando] = useState(false)
   const [duration, setDuration] = useState(0)
   const [currentTime, setCurrentTime] = useState(0)
 
-  const {musica} = useContext(GlobalContext)
-  const {setMusica} = useContext(GlobalContext)
+  const { musica } = useContext(GlobalContext)
+  const { setMusica } = useContext(GlobalContext)
 
   const audioPlay = useRef()
   const progressBar = useRef()
@@ -32,7 +33,7 @@ export default function PlayMusica() {
     const seconds = Math.floor(secs % 60)
     const returnSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`
     return `${returnMinutes} : ${returnSeconds}`
-  }  
+  }
 
   const MusicaAtual = (props) => {
     setMusica(props)
@@ -59,7 +60,7 @@ export default function PlayMusica() {
     animationRef.current = requestAnimationFrame(whilePlaying)
 
   }
-  
+
   const ChangeRange = () => {
     audioPlay.current.currentTime = progressBar.current.value
     ChangePlayCurrentTime()
@@ -74,16 +75,21 @@ export default function PlayMusica() {
   return (
     <div className={styles.container}>
 
+
+      <img className={styles.imagem} src={`/assets/${musica}.jpg`} />
+
+      <h1 className={styles.title}> {musica}.mp3</h1>
+
       <audio ref={audioPlay} className={styles.musica} src={`/music/${musica}.m4a`} />
 
       <div className={styles.containerButton}>
 
-      <FaArrowAltCircleLeft className={styles.botoes} onClick={() => MusicaAtual(musica - 1)} /> 
+        <FaArrowAltCircleLeft className={styles.botoes} onClick={() => MusicaAtual(musica - 1)} />
         {
           tocando === false ? <button className={styles.playButton} onClick={() => PlayPause()}> <FaPlay /> </button> : <button className={styles.playButton} onClick={() => PlayPause()}> <FaPause /> </button>
 
         }
-      <FaArrowAltCircleRight className={styles.botoes}  onClick={() => MusicaAtual(musica + 1)} />
+        <FaArrowAltCircleRight className={styles.botoes} onClick={() => MusicaAtual(musica + 1)} />
 
       </div>
 
