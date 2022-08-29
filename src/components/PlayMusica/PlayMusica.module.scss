@@ -19,7 +19,7 @@
         }
         --bar-bg: #dfdfdf;
         --seek-bedore-color: rgb(95, 95, 95);
-        --knobby: #000000;
+        --knobby: #3b3b3b;
         --selectedKnobby: #26c9c3;
       } 
       
@@ -86,6 +86,15 @@
     
 }
 
+.volume{
+    width: 100px;
+    margin-left: 10px;
+}
+
+.divVolume{
+    margin-top: 20px;
+    font-size: 20px;
+}
 
 .containerTempo{
     display: flex;
