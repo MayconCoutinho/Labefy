@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React, { useState} from "react";
 import PlayMusica from '../components/PlayMusica/PlayMusica';
 
+
 export default function Home() {
 
   const [musica, setMusica] = useState(3);
