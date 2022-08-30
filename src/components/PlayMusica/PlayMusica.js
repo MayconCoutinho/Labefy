@@ -46,12 +46,23 @@ export default function PlayMusica() {
   useEffect(() =>{
 
     if(tocando){
-
       if( currentTime == duration){
         MusicaAtual(musica+1)
-
    }
+
+    if( currentTime == 0){
+      cancelAnimationFrame(animationRef.current)
+      animationRef.current = requestAnimationFrame(whilePlaying)
+
     }
+
+    
+    if( currentTime == 1){
+      animationRef.current = requestAnimationFrame(whilePlaying)
+
+    }
+  
+}
 
  },[duration,currentTime])
 
@@ -90,31 +101,25 @@ export default function PlayMusica() {
       cancelAnimationFrame(animationRef.current)
     }
   }
-
   const MusicaAtual = (props) => {
     setMusica(props)
     setDuration('')
     audioPlay.current.autoplay = tocando  
   }
-
-
   const whilePlaying = () => {
     progressBar.current.value = audioPlay.current.currentTime
     ChangePlayCurrentTime()
     animationRef.current = requestAnimationFrame(whilePlaying)
-
   }
 
   const ChangeVolume = (event) => {
     const {name, value} = event.target
     setVolume(value)
-
   }
 
   const ChangeRange = () => {
     audioPlay.current.currentTime = progressBar.current.value
     ChangePlayCurrentTime()
-
   }
 
   const ChangePlayCurrentTime = () => {
@@ -160,6 +165,5 @@ export default function PlayMusica() {
       <input className={styles.volume} type='range' defaultValue="50" min={0} max={100} value={volume} onChange={ChangeVolume}/>
       </div> 
     </div>
-
   )
 }
