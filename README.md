@@ -1,13 +1,11 @@
-Labefy
-⏳ Projeto em andamento
-⚙ BETA
-
-
+# SpotiLofi
 
 ## 📲 User demo ➜ [Link Surge](https://labefy-nine.vercel.app/)
 
+<h1 align="center">
+<img width=500 src="https://user-images.githubusercontent.com/60453269/187751851-c3bade06-4a6d-4a42-88ee-e25c173f30ff.png">
+</h1>
 
-![image](https://user-images.githubusercontent.com/60453269/187751851-c3bade06-4a6d-4a42-88ee-e25c173f30ff.png)
 
 ## 🚀 Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
