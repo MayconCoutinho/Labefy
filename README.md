@@ -70,7 +70,7 @@
 > Caso tenha Git basta da git clone, caso não tenha baixe o projeto completo em dowlon
 
 ```BASH
-git clone https://github.com/MayconCoutinho/ReactJS-Template
+git clone https://github.com/MayconCoutinho/SpotiLofi
 ```
 
 <br /> 
