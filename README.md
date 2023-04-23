@@ -41,10 +41,13 @@
 
  <br/>
 
-| Pagina Principal |
+| Pagina Principal Dark |
 |---|
 ![image](https://user-images.githubusercontent.com/60453269/233812334-e14963b1-337a-4da8-a658-36f5a5bec629.png)  
 
+| Pagina Principal Light |
+|---|
+![image](https://user-images.githubusercontent.com/60453269/233812443-1f5c469f-4cce-48db-bb9a-97f41597bfdf.png)
 
 <br /> 
 
